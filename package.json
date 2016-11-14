@@ -2,9 +2,7 @@
   "name": "webpack-porter",
   "version": "0.1.0",
   "description": "Webpack build and deploy scripts",
-  "bin": {
-    "webpack-porter": "cli.js"
-  },
+  "bin": "./cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
