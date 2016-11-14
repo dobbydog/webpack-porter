@@ -1,0 +1,18 @@
+{
+  "name": "webpack-porter",
+  "version": "0.1.0",
+  "description": "Webpack build and deploy scripts",
+  "bin": {
+    "webpack-porter": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "ssh2": "^0.5.4",
+    "yargs": "^6.3.0"
+  }
+}
