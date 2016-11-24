@@ -5,4 +5,4 @@ require('yargs')
 .demand(1)
 .strict()
 .help()
-.argv
+.argv;

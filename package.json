@@ -10,7 +10,10 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
+    "preprocess-loader": "^0.2.0",
     "ssh2": "^0.5.4",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.11",
     "yargs": "^6.3.0"
   }
 }
