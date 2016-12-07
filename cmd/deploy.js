@@ -12,7 +12,7 @@ exports.builder = yargs => {
     desc: 'Shows the planned task for each file. No changes will be made to the remote files.'
   });
 
-  yargs.options('no-build', {
+  yargs.options('skip-build', {
     default: false,
     desc: 'Disables build process before deploy.'
   });
@@ -25,9 +25,9 @@ exports.handler = argv => {
     dryRun: argv.dryRun
   };
 
-  if (!argv.noBuild) {
-    webpackBuild(target.env, target.vars);
+  if (!argv.skipBuild) {
+    webpackBuild(target.env, target.vars).then(() => sftpDeploy(target.deploy, options));
+  } else {
+    sftpDeploy(target.deploy, options);
   }
-
-  sftpDeploy(target.deploy, options);
 };
