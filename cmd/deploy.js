@@ -1,4 +1,4 @@
-const SftpSync = require('../lib/sftp-sync');
+const sftpDeploy = require('sftp-deploy');
 const webpackBuild = require('../lib/webpack-build');
 const helper = require('../lib/cmd-helper');
 
@@ -25,10 +25,9 @@ exports.handler = argv => {
     dryRun: argv.dryRun
   };
 
-  let sync = new SftpSync(target.deploy, options);
-
   if (!argv.noBuild) {
     webpackBuild(target.env, target.vars);
   }
-  sync.start();
+
+  sftpDeploy(target.deploy, options);
 };
