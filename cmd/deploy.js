@@ -1,4 +1,4 @@
-const sftpDeploy = require('sftp-deploy');
+const sftpDeploy = require('sftp-sync-deploy');
 const webpackBuild = require('../lib/webpack-build');
 const helper = require('../lib/cmd-helper');
 
